@@ -25,8 +25,6 @@ export default function Navbar() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/podcast', label: 'Podcast' },
-    { href: '/programs', label: 'Programs' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -37,7 +35,7 @@ export default function Navbar() {
         <div className="navbar__inner">
           <Link href="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
             <span className="navbar__logo-name">DIVYANSH DUBEY</span>
-            <span className="navbar__logo-tagline">Entrepreneur &amp; Strategist</span>
+            <span className="navbar__logo-tagline">Entrepreneur &amp; Community Builder</span>
           </Link>
 
           <div className="navbar__menu">
@@ -103,14 +101,8 @@ export default function Navbar() {
         </Link>
 
         <div className="mobile-menu__social">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" id="mobile-instagram-link">
+          <a href="https://instagram.com/divyansh.24" target="_blank" rel="noopener noreferrer" id="mobile-instagram-link">
             <SocialIcon type="instagram" />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="mobile-linkedin-link">
-            <SocialIcon type="linkedin" />
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" id="mobile-youtube-link">
-            <SocialIcon type="youtube" />
           </a>
         </div>
       </div>

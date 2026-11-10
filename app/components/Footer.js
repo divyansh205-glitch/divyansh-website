@@ -5,25 +5,12 @@ export default function Footer() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/podcast', label: 'Podcast' },
-    { href: '/programs', label: 'Programs' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
 
-  const programLinks = [
-    { href: '/programs', label: 'Elite Mastermind' },
-    { href: '/programs', label: 'Business Coaching' },
-    { href: '/programs', label: 'Strategy Sessions' },
-    { href: '/programs', label: 'Online Courses' },
-    { href: '/programs', label: 'Group Coaching' },
-  ];
-
   const socialLinks = [
-    { href: 'https://instagram.com', label: 'Instagram', icon: 'IG' },
-    { href: 'https://linkedin.com', label: 'LinkedIn', icon: 'IN' },
-    { href: 'https://youtube.com', label: 'YouTube', icon: 'YT' },
-    { href: 'https://twitter.com', label: 'Twitter', icon: 'TW' },
+    { href: 'https://instagram.com/divyansh.24', label: 'Instagram', icon: 'IG' },
   ];
 
   return (
@@ -32,10 +19,9 @@ export default function Footer() {
         <div className="footer__inner">
           <div>
             <div className="footer__brand-name">DIVYANSH DUBEY</div>
-            <div className="footer__brand-tagline">Entrepreneur &amp; Business Strategist</div>
+            <div className="footer__brand-tagline">Entrepreneur &amp; Community Builder</div>
             <p className="footer__brand-desc">
-              When ambitious people make great money, they do extraordinary things.
-              I help visionary entrepreneurs build profitable businesses and create lasting impact.
+              A community for learning about product-based direct selling through customer service, practical training, and mentorship.
             </p>
             <div className="footer__social">
               {socialLinks.map((link) => (
@@ -68,23 +54,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="footer__col-title">Programs</div>
-            <div className="footer__links">
-              {programLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="footer__link">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
             <div className="footer__col-title">Connect</div>
             <div className="footer__links">
-              <a href="mailto:hello@divyanshdubey.com" className="footer__link">hello@divyanshdubey.com</a>
+              <a href="mailto:divyanshdubey938@gmail.com" className="footer__link">divyanshdubey938@gmail.com</a>
               <Link href="/contact" className="footer__link">Book a Call</Link>
-              <Link href="/podcast" className="footer__link">Listen to Podcast</Link>
-              <Link href="/contact" className="footer__link">Speaking Inquiries</Link>
+              {/* <Link href="/programs" className="footer__link">How It Works</Link> */}
+              <Link href="/contact" className="footer__link">Ask a Question</Link>
             </div>
             <div style={{ marginTop: 'var(--space-6)' }}>
               <Link href="/contact" className="btn btn-gold-outline btn-sm">

@@ -5,33 +5,32 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ScrollReveal';
 
 export const metadata = {
-  title: 'About Divyansh Dubey | Entrepreneur & Business Strategist',
-  description: 'Learn about Divyansh Dubey - entrepreneur, investor, and business strategist dedicated to helping ambitious people build profitable businesses.',
+  title: 'About Divyansh Dubey',
+  description: 'Meet Divyansh Dubey and learn about the community’s customer-first approach to product-based direct selling.',
 };
 
 export default function AboutPage() {
   const values = [
-    { icon: '💡', title: 'Relentless Growth', text: 'I believe growth never stops. Every challenge is an opportunity to level up — personally and professionally.' },
-    { icon: '🤝', title: 'Genuine Service', text: "True success comes from serving others. My mission is to give more than I take, and create ripple effects of positive change." },
-    { icon: '💰', title: 'Unapologetic Success', text: 'Money is a tool for good. I empower entrepreneurs to earn their full potential without guilt or limitation.' },
-    { icon: '🌟', title: 'Radical Transparency', text: "I share the real stories — the wins, the failures, and everything in between. No fluff, just truth and actionable insight." },
-    { icon: '🚀', title: 'Bold Action', text: 'Success requires courage. I help entrepreneurs take bold, strategic actions that move the needle, even when it feels scary.' },
-    { icon: '❤️', title: 'Community First', text: 'We go further together. Building a thriving community of purpose-driven entrepreneurs is at the heart of everything I do.' },
+    { icon: '💡', title: 'Keep Learning', text: 'Build product knowledge and practical business skills through steady learning and open questions.' },
+    { icon: '🤝', title: 'Serve Customers', text: 'Put customer needs first and share accurate information about products, pricing, and availability.' },
+    { icon: '🌟', title: 'Be Transparent', text: 'Discuss the costs, effort, and compensation terms clearly. Business outcomes are never guaranteed.' },
+    { icon: '🚀', title: 'Take Thoughtful Action', text: 'Make informed decisions, set a sustainable pace, and focus on consistent, responsible effort.' },
+    { icon: '❤️', title: 'Support Each Other', text: 'Share what you learn, welcome questions, and help others make decisions that suit their own goals.' },
+    { icon: '🌍', title: 'Grow with Purpose', text: 'Build relationships and skills that can serve you well, whatever direction your journey takes.' },
   ];
 
   const timeline = [
-    { year: '2016', title: 'First Venture', desc: 'Started my first business from my college dorm room with nothing but a laptop and a dream.' },
-    { year: '2018', title: 'First ₹1 Crore Year', desc: 'Crossed the seven-figure mark after years of relentless learning, pivoting, and executing.' },
-    { year: '2020', title: 'Launched The Podcast', desc: 'Started "The Divyansh Dubey Show" to share lessons and inspire the next generation of entrepreneurs.' },
-    { year: '2022', title: 'Elite Mastermind Launch', desc: 'Created the Elite Entrepreneur Mastermind, serving 50+ high-level entrepreneurs to scale their businesses.' },
-    { year: '2024', title: 'Impact at Scale', desc: 'Now helping 500+ entrepreneurs across India build profitable businesses and create lasting impact.' },
+    { year: '01', title: 'Explore', desc: 'Start with a conversation about the business opportunityx, the business model, costs, and your own goals.' },
+    { year: '02', title: 'Understand', desc: 'Take time to review current product information and the written compensation terms.' },
+    { year: '03', title: 'Learn', desc: 'Build product knowledge and practise clear, customer-first conversations with guidance.' },
+    { year: '04', title: 'Grow Together', desc: 'If you choose to participate, keep learning, serve customers, and support others on the team.' },
   ];
 
   return (
     <>
       <div className="announcement-bar">
-        <span>DOWNLOAD THE FREE <strong>90-DAY BUSINESS BLUEPRINT</strong></span>
-        <Link href="/contact" id="about-announcement-link">GRAB IT FREE →</Link>
+        <span>LEARN ABOUT THE <strong>COMMUNITY</strong></span>
+        <Link href="/contact" id="about-announcement-link">ASK A QUESTION →</Link>
       </div>
       <Navbar />
 
@@ -39,7 +38,7 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="page-header">
           <div className="container">
-            <div className="page-header__eyebrow">My Story</div>
+            <div className="page-header__eyebrow">The Person Behind the Community</div>
             <h1 className="page-header__title">ABOUT DIVYANSH</h1>
           </div>
         </div>
@@ -73,8 +72,8 @@ export default function AboutPage() {
                     padding: 'var(--space-5) var(--space-6)',
                     textAlign: 'center',
                   }}>
-                    <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'white', lineHeight: 1 }}>8+</div>
-                    <div style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', marginTop: '4px' }}>Years Building</div>
+                    <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'white', lineHeight: 1 }}>TEAM</div>
+                    <div style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', marginTop: '4px' }}>Learn Together</div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -83,19 +82,19 @@ export default function AboutPage() {
                 <div>
                   <div className="about__eyebrow">Who I Am</div>
                   <h2 className="about__title">
-                    Entrepreneur,<br />
-                    <mark>Investor</mark> &amp;<br />
-                    Strategist
+                    Building<br />
+                    <mark>with people</mark><br />
+                    in mind.
                   </h2>
                   <div className="about__divider" />
                   <p className="about__text">
-                    I&apos;m Divyansh Dubey — an entrepreneur, investor, and business strategist who has built multiple companies from the ground up and helped hundreds of others do the same.
+                    I&apos;m Divyansh Dubey. I&apos;m part of a community for people exploring a product-led direct-selling business with guidance and peer support.
                   </p>
                   <p className="about__text">
-                    My journey started with a simple belief: <em>when ambitious people make great money, they do extraordinary things.</em> This belief has guided every business decision, every coaching program, and every conversation I&apos;ve had.
+                    I believe a business conversation should begin with the facts: what the products are, how customers are served, what participation may cost, and how the compensation plan works.
                   </p>
                   <p className="about__text">
-                    Today, I work with entrepreneurs at every stage — from those taking their first leap to seasoned business owners looking to scale to seven figures and beyond. <em>My mission is to give you the strategies, mindset, and community to reach your full potential.</em>
+                    My role is to help people find clear answers and learn the fundamentals. Participation is optional, and business results vary; there is no promise of income or a particular outcome.
                   </p>
                 </div>
               </ScrollReveal>
@@ -108,9 +107,9 @@ export default function AboutPage() {
           <div className="container">
             <ScrollReveal>
               <div className="section-header">
-                <div className="section-header__eyebrow">The Journey</div>
+                <div className="section-header__eyebrow">A Thoughtful First Step</div>
                 <h2 className="section-header__title">
-                  My Story
+                  How We Get Started
                   <span className="underline-decoration" />
                 </h2>
               </div>
@@ -194,17 +193,14 @@ export default function AboutPage() {
           <div className="container">
             <ScrollReveal>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 5vw, 4rem)', letterSpacing: '0.03em', textTransform: 'uppercase', color: 'white', marginBottom: 'var(--space-5)' }}>
-                READY TO BUILD SOMETHING GREAT?
+                CURIOUS ABOUT THE OPPORTUNITY?
               </div>
               <p style={{ fontSize: 'var(--text-lg)', color: 'rgba(255,255,255,0.85)', marginBottom: 'var(--space-8)', maxWidth: '560px', margin: '0 auto var(--space-8)' }}>
-                Let&apos;s talk about your business and map a clear path to your next level of success.
+                Let&apos;s have a no-pressure conversation about products, costs, expectations, and whether this business model fits your goals.
               </p>
               <div style={{ display: 'flex', gap: 'var(--space-4)', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link href="/contact" className="btn btn-outline btn-lg" style={{ borderColor: 'white', color: 'white' }} id="about-cta-contact">
-                  Work With Me
-                </Link>
-                <Link href="/programs" className="btn btn-lg" style={{ background: 'white', color: 'var(--color-orange)' }} id="about-cta-programs">
-                  View Programs
+                  Talk With a Mentor
                 </Link>
               </div>
             </ScrollReveal>

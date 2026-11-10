@@ -1,12 +1,12 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'DIVYANSH DUBEY // Entrepreneur, Investor & Business Strategist',
-  description: 'Divyansh Dubey - Entrepreneur, Investor & Business Strategist. I help ambitious people build profitable businesses and create lasting impact.',
-  keywords: 'Divyansh Dubey, entrepreneur, business strategist, investor, podcast, coaching, mastermind',
+  title: 'Divyansh Dubey',
+  description: 'Learn about a product-led business opportunity built around customer value, practical training, mentorship, and community.',
+  keywords: 'Divyansh Dubey, direct selling, product business, mentorship, community',
   openGraph: {
-    title: 'DIVYANSH DUBEY // Entrepreneur & Business Strategist',
-    description: 'When ambitious people make great money, they do extraordinary things.',
+    title: 'Divyansh Dubey',
+    description: 'Explore a product-led business opportunity with practical learning and community support.',
     type: 'website',
     url: 'https://divyansh-dubey.com',
   },

@@ -13,22 +13,25 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In production, send to your backend/email service
+    const subject = encodeURIComponent(`Website inquiry: ${form.inquiry}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'Not provided'}\n\n${form.message}`
+    );
+    window.location.href = `mailto:divyanshdubey938@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
   const contactDetails = [
-    { icon: '📧', label: 'Email', value: 'hello@divyanshdubey.com' },
-    { icon: '📱', label: 'Instagram', value: '@divyanshdubey' },
-    { icon: '🎙️', label: 'Podcast', value: 'The Divyansh Dubey Show' },
-    { icon: '📍', label: 'Location', value: 'Mumbai, India' },
+    { icon: '📧', label: 'Email', value: 'divyanshdubey938@gmail.com' },
+    { icon: '🤝', label: 'Community' },
+    { icon: '📍', label: 'Location', value: 'Noida, India' },
   ];
 
   return (
     <>
       <div className="announcement-bar">
-        <span>READY TO BUILD YOUR DREAM BUSINESS? <strong>LET&apos;S TALK.</strong></span>
-        <Link href="#contact-form" id="contact-announcement-link">BOOK A CALL →</Link>
+        <span>HAVE QUESTIONS ABOUT THE BUSINESS? <strong>LET&apos;S TALK.</strong></span>
+        <Link href="#contact-form" id="contact-announcement-link">GET IN TOUCH →</Link>
       </div>
       <Navbar />
 
@@ -36,7 +39,7 @@ export default function ContactPage() {
         {/* Page Header */}
         <div className="page-header">
           <div className="container">
-            <div className="page-header__eyebrow">Get In Touch</div>
+            <div className="page-header__eyebrow">Start with a Conversation</div>
             <h1 className="page-header__title">CONTACT</h1>
           </div>
         </div>
@@ -50,16 +53,16 @@ export default function ContactPage() {
                 <div className="contact-info">
                   <div className="about__eyebrow">Let&apos;s Connect</div>
                   <h2 className="contact-info__title">
-                    Let&apos;s Build<br />
-                    <span>Something</span><br />
-                    Great Together.
+                    Let&apos;s Talk<br />
+                    <span>About the</span><br />
+                    Opportunity.
                   </h2>
                   <div className="about__divider" />
                   <p className="contact-info__text">
-                    Whether you&apos;re interested in working together, have a question about my programs, or want to invite me to speak at your event — I&apos;d love to hear from you.
+                    Interested in the products or curious about how the business works? Send your questions and I&apos;ll help you find the information you need to make an informed decision.
                   </p>
                   <p className="contact-info__text">
-                    Fill out the form and I&apos;ll get back to you within 48 hours. For urgent inquiries, reach out directly on Instagram.
+                    There&apos;s no pressure to join. Ask about product details, current costs, training, or the written compensation terms.
                   </p>
 
                   <div style={{ marginTop: 'var(--space-8)' }}>
@@ -74,27 +77,6 @@ export default function ContactPage() {
                     ))}
                   </div>
 
-                  {/* Social Links */}
-                  <div style={{ marginTop: 'var(--space-8)' }}>
-                    <div style={{ fontSize: 'var(--text-xs)', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-white-50)', marginBottom: 'var(--space-4)' }}>
-                      Follow Along
-                    </div>
-                    <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
-                      {['Instagram', 'LinkedIn', 'YouTube', 'Twitter'].map((s) => (
-                        <a
-                          key={s}
-                          href="#"
-                          className="footer__social-link"
-                          aria-label={s}
-                          id={`contact-${s.toLowerCase()}-link`}
-                        >
-                          <span style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.05em' }}>
-                            {s.slice(0, 2).toUpperCase()}
-                          </span>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </ScrollReveal>
 
@@ -104,10 +86,10 @@ export default function ContactPage() {
                     <div style={{ textAlign: 'center', padding: 'var(--space-12) 0' }}>
                       <div style={{ fontSize: '4rem', marginBottom: 'var(--space-4)' }}>🎉</div>
                       <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-white)', marginBottom: 'var(--space-4)' }}>
-                        Message Received!
+                        Your Email Is Ready
                       </h3>
                       <p style={{ color: 'var(--color-white-70)', lineHeight: 1.8, marginBottom: 'var(--space-6)' }}>
-                        Thank you for reaching out! I read every message personally and will get back to you within 48 hours.
+                        Your email app should open with your message. If it doesn&apos;t, email divyanshdubey938@gmail.com directly.
                       </p>
                       <button onClick={() => setSubmitted(false)} className="btn btn-gold-outline" id="contact-send-another-btn">
                         Send Another Message
@@ -116,7 +98,7 @@ export default function ContactPage() {
                   ) : (
                     <>
                       <h2 className="contact-form__title">Send a Message</h2>
-                      <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
+                      <form onSubmit={handleSubmit} aria-label="Contact form">
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
                           <div className="form-group">
                             <label className="form-label" htmlFor="contact-name">Full Name *</label>
@@ -170,22 +152,21 @@ export default function ContactPage() {
                             required
                           >
                             <option value="">Select an option...</option>
-                            <option value="mastermind">Elite Entrepreneur Mastermind</option>
-                            <option value="accelerator">Business Accelerator</option>
-                            <option value="strategy">Strategy Session</option>
-                            <option value="course">Online Course</option>
-                            <option value="speaking">Speaking Inquiry</option>
+                            <option value="products">Product information</option>
+                            <option value="business">How the business works</option>
+                            <option value="costs">Costs and compensation terms</option>
+                            <option value="mentorship">Training and mentorship</option>
                             <option value="other">Other</option>
                           </select>
                         </div>
 
                         <div className="form-group">
-                          <label className="form-label" htmlFor="contact-message">Tell Me About Your Business &amp; Goals *</label>
+                          <label className="form-label" htmlFor="contact-message">What Would You Like to Know? *</label>
                           <textarea
                             id="contact-message"
                             name="message"
                             className="form-textarea"
-                            placeholder="Share where you are in your business, what challenges you're facing, and what you're hoping to achieve..."
+                            placeholder="Ask about products, costs, training, or the business model..."
                             value={form.message}
                             onChange={handleChange}
                             required
@@ -228,10 +209,10 @@ export default function ContactPage() {
 
             <div style={{ maxWidth: '700px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
               {[
-                { q: 'How quickly will I hear back?', a: 'I personally read every message and respond within 48 hours. For urgent matters, reach out via Instagram DM.' },
-                { q: 'Do you work with beginners?', a: 'Absolutely. My programs are designed for entrepreneurs at every stage — from those just starting to those scaling to seven figures.' },
-                { q: 'Are programs available online?', a: 'Yes! All programs are delivered virtually, so you can work with me from anywhere in India or worldwide.' },
-                { q: 'What makes your coaching different?', a: 'I combine real-world entrepreneur experience with proven frameworks. I\'ve been in the trenches and built real businesses, so I give you practical strategies that actually work.' },
+                { q: 'Do I need prior experience?', a: 'You can start by asking questions and learning about the products and business model. Take time to decide whether it fits your circumstances.' },
+                { q: 'Is income guaranteed?', a: 'No. This is an independent business opportunity, not a job or guaranteed income. Any results depend on factors such as sales, expenses, effort, and the current written compensation terms.' },
+                { q: 'What should I review before deciding?', a: 'Ask for current product pricing, any start-up or ongoing costs, refund terms, and the complete compensation plan. Review the details before making a commitment.' },
+                { q: 'Can I ask questions without joining?', a: 'Yes. You can have a conversation about the products and the business model before deciding whether you want to participate.' },
               ].map((faq, i) => (
                 <ScrollReveal key={faq.q} delay={i * 80}>
                   <div style={{

@@ -5,13 +5,6 @@ import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
 
 export default function HomePage() {
-  const episodes = [
-    { num: 'EP.042', title: 'How to Build a 7-Figure Business From Scratch', duration: '38 min' },
-    { num: 'EP.041', title: 'The Mindset Shift That Changed Everything for My Business', duration: '31 min' },
-    { num: 'EP.040', title: 'Why Your Network Is Your Greatest Asset', duration: '44 min' },
-    { num: 'EP.039', title: 'How to Attract High-Ticket Clients Consistently', duration: '27 min' },
-    { num: 'EP.038', title: 'The Secret to Scaling Without Burning Out', duration: '36 min' },
-  ];
 
   const testimonials = [
     {
@@ -61,19 +54,12 @@ export default function HomePage() {
   const mediaLogos = ['Forbes', 'Inc.', 'Entrepreneur', 'Business Today', 'Economic Times'];
 
   const stats = [
-    { number: '500+', label: 'Clients Served' },
-    { number: '₹50Cr+', label: 'Revenue Generated' },
-    { number: '42', label: 'Podcast Episodes' },
+    { number: '20+', label: 'Clients Served' },
+    { number: '₹5Cr+', label: 'Revenue Generated' },
   ];
 
   return (
     <>
-      {/* Announcement Bar */}
-      <div className="announcement-bar">
-        <span>GRAB OUR <strong>90-DAY BUSINESS BLUEPRINT</strong> AND UNLOCK HIDDEN REVENUE &amp; CONSISTENT GROWTH!</span>
-        <Link href="/contact" id="announcement-download-link">DOWNLOAD NOW →</Link>
-      </div>
-
       <Navbar />
 
       <main id="main-content">
@@ -104,9 +90,6 @@ export default function HomePage() {
               <div className="hero__actions">
                 <Link href="/contact" className="btn btn-primary btn-lg" id="hero-cta-primary">
                   Work With Me
-                </Link>
-                <Link href="/podcast" className="btn btn-outline btn-lg" id="hero-cta-podcast">
-                  Listen to Podcast
                 </Link>
               </div>
             </div>
@@ -193,81 +176,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============================================================
-            PODCAST SECTION
-            ============================================================ */}
-        <section className="podcast" id="podcast-section">
-          <div className="container">
-            <div className="podcast__inner">
-              <ScrollReveal direction="left">
-                <div className="podcast__info">
-                  <div className="podcast__eyebrow">Now Streaming</div>
-                  <h2 className="podcast__title">
-                    THE<br />
-                    <span>DIVYANSH</span><br />
-                    <span>DUBEY</span><br />
-                    SHOW
-                  </h2>
-
-                  <div className="podcast__cover">
-                    <Image
-                      src="/images/podcast-cover.jpg"
-                      alt="The Divyansh Dubey Show - Podcast Cover"
-                      width={200}
-                      height={200}
-                      style={{ width: '100%', height: 'auto' }}
-                    />
-                  </div>
-
-                  <p className="podcast__description">
-                    As an entrepreneur and investor, I believe that when ambitious people make great money, they do extraordinary things! Throughout the episodes, I&apos;ll provide you with every tool you need to build an <em>unapologetically successful business.</em>
-                  </p>
-                  <p className="podcast__description">
-                    You&apos;ll get the insider tips, tools, and incredible stories to <em>grow your business, your wealth, and your impact.</em>
-                  </p>
-
-                  <div className="podcast__cta">
-                    <Link href="/podcast" className="btn btn-primary" id="podcast-tune-in-btn">
-                      Tune In
-                    </Link>
-                    <Link href="/podcast" className="btn btn-gold-outline" id="podcast-view-all-btn">
-                      View All Episodes
-                    </Link>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal direction="right">
-                <div className="podcast__episodes">
-                  <div className="podcast__episodes-header">
-                    <div className="podcast__episodes-line" aria-hidden="true" />
-                    <span className="podcast__episodes-label">Recent Episodes — Listen Now</span>
-                  </div>
-
-                  {episodes.map((ep, i) => (
-                    <Link
-                      key={ep.num}
-                      href="/podcast"
-                      className="episode-item"
-                      id={`episode-item-${i + 1}`}
-                    >
-                      <div className="episode__number">{ep.num}</div>
-                      <div className="episode__content">
-                        <div className="episode__title">{ep.title}</div>
-                        <div className="episode__meta">{ep.duration}</div>
-                      </div>
-                      <div className="episode__play-btn" aria-label={`Play ${ep.title}`}>
-                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
+     
 
         {/* ============================================================
             TESTIMONIALS SECTION
@@ -389,7 +298,7 @@ export default function HomePage() {
                   <p className="social-section__handle">
                     Follow along on Instagram:{' '}
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" id="instagram-follow-link">
-                      @divyanshdubey
+                      @divyansh.24
                     </a>
                   </p>
                 </div>
